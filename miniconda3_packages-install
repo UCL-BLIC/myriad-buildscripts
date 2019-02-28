@@ -1,0 +1,40 @@
+#!/usr/bin/bash -i
+
+###############################################
+# Installing miniconda and bioconda packages
+#
+# by LC, 2018 
+#
+
+
+#- deeptools
+conda install -c bioconda deeptools
+
+#- multiQC (install 1.6, 0.9 crashes on nextflow_chipseq)
+#- config conda to download 1.6, normal installation would install 0.9 as described here (https://github.com/ewels/MultiQC/issues/729)
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+conda install -c bioconda multiqc multiqc=1.6
+
+#- UCSC bedGraphToBigWig, bigWigToWig, wigToBigWig
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+conda install -c bioconda ucsc-bedgraphtobigwig
+conda install -c bioconda ucsc-bigwigtowig
+conda install -c bioconda ucsc-wigtobigwig
+
+#- other
+conda install -c bioconda phantompeakqualtools
+conda install -c bioconda kallisto
+conda install -c bioconda r-ngsplot
+conda install -c bioconda macs2
+conda install -c bioconda trim-galore
+conda install -c bioconda hisat2
+conda install -c bioconda rseqc
+conda install -c bioconda preseq
+conda install -c bioconda qualimap
+conda install -c bioconda subread
+conda install -c bioconda stringtie
+
