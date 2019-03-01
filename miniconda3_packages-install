@@ -1,7 +1,7 @@
 #!/usr/bin/bash -i
 
 ###############################################
-# Installing miniconda and bioconda packages
+# Installing bioconda packages
 #
 # by LC, 2018 
 #
@@ -37,4 +37,5 @@ conda install -c bioconda preseq
 conda install -c bioconda qualimap
 conda install -c bioconda subread
 conda install -c bioconda stringtie
+conda install -c bioconda bedtools
 
