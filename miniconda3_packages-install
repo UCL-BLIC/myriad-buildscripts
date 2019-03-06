@@ -25,10 +25,10 @@ conda install -c bioconda ucsc-bedgraphtobigwig
 conda install -c bioconda ucsc-bigwigtowig
 conda install -c bioconda ucsc-wigtobigwig
 
+
 #- other
 conda install -c bioconda phantompeakqualtools
 conda install -c bioconda kallisto
-conda install -c bioconda r-ngsplot
 conda install -c bioconda macs2
 conda install -c bioconda trim-galore
 conda install -c bioconda hisat2
@@ -41,8 +41,19 @@ conda install -c bioconda bedtools
 conda install -c bioconda snpEff
 
 
+#- issues
+#---------
+
 #- bedtools and other packages depend on (and therefore install) samtools, but the installed version gives me errors: 
 #-	samtools: error while loading shared libraries: libcrypto.so.1.0.0: cannot open shared object file: No such file or directory
 #- fix by downgrading openssl from 1.1 to 1.0 (https://github.com/bioconda/bioconda-recipes/issues/12100)
-conda install -c bioconda samtools openssl=1.0
+conda install -c bioconda openssl=1.0
 
+#- biconda also installs R, and the bioconda R gets me this error:
+#- 	/shared/ucl/depts/cancer/apps/miniconda3/lib/R/bin/exec/R: error while loading shared libraries: libiconv.so.2: cannot open shared object file: No such file or directory
+#- so I have 2 options, either I make sure that bioconda is loaded first before r/recommended, or I just use the bioconda R and fix the above issue:
+conda install -c bioconda libiconv openssl=1.0
+
+#- biconda also installs perl, so if at some point I load bioconda and it changes to bioconda perl, i need a few modules that were not installed by default
+conda install -c bioconda perl-dbi openssl=1.0
+conda install -c bioconda perl-try-tiny openssl=1.0
