@@ -25,6 +25,8 @@ conda install -c bioconda ucsc-bedgraphtobigwig
 conda install -c bioconda ucsc-bigwigtowig
 conda install -c bioconda ucsc-wigtobigwig
 
+#- nf-core
+conda install -c bioconda nf-core
 
 #- other
 conda install -c bioconda phantompeakqualtools
@@ -39,6 +41,7 @@ conda install -c bioconda subread
 conda install -c bioconda stringtie
 conda install -c bioconda bedtools
 conda install -c bioconda snpEff
+conda install -c bioconda intervene
 
 
 #- issues
