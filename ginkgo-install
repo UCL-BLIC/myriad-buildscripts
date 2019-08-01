@@ -73,9 +73,6 @@ cd ${INSTALL_PREFIX}/${VERSION}
 mkdir -p R
 
 env R_LIBS=${INSTALL_PREFIX}/${VERSION}/R:${HOME}/R R --vanilla <<'EOF'
-# heatmap3
-install.packages("heatmap3", lib = "R", repos = "https://cran.ma.imperial.ac.uk/")
-
 # amap is required by ctc and the default version is not compatible with the R version we are using here
 install.packages("https://cran.r-project.org/src/contrib/Archive/amap/amap_0.8-14.tar.gz", lib = "R")
 
