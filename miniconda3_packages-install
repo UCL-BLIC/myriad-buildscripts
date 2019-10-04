@@ -43,6 +43,7 @@ conda install -c bioconda bedtools
 conda install -c bioconda snpEff
 conda install -c bioconda intervene
 conda install -c bioconda salmon openssl=1.0
+conda install -c bioconda bioawk openssl=1.0
 
 
 #- issues
