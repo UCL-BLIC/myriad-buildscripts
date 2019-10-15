@@ -16,7 +16,7 @@ use File::Basename;
 #######################################################################
 
 
-my $cytofpipe_home = '/shared/ucl/depts/cancer/apps/cytofpipe/v2.0';
+my $cytofpipe_home = '/shared/ucl/depts/cancer/apps/cytofpipe/v2.1';
 my $cytofpipe_array_home = '/shared/ucl/depts/cancer/apps/cytofpipe_array/v0.2';
 
 my $rand_id=`od -N 4 -t uL -An /dev/urandom | tr -d " " | tr -d "\n"`;
@@ -163,7 +163,7 @@ sub print_usage {
 
 	my $usage0="";
         my $usage1="Program: Cytofpipe_array";
-        my $usage2= "Version: 0.2 (running cytofpipe/v2.0)";
+        my $usage2= "Version: 0.2 (running cytofpipe/v2.1)";
         my $usage3= "Contact: Lucia Conde <l.conde\@ucl.ac.uk>";
         my $usage4="";
         my $usage5="Usage:   cytofpipe_array -i DIR -o DIR -m FILE --iter NUM [options]";
@@ -198,7 +198,7 @@ sub usage_clustering {
 
 	die qq(
 	Program: Cytofpipe_array
-	Version: 0.2 (running cytofpipe/v2.0)
+	Version: 0.2 (running cytofpipe/v2.1)
 	Contact: Lucia Conde <l.conde\@ucl.ac.uk>
 
 	Usage:   cytofpipe_array -i DIR -o DIR -m FILE --iter NUM [options]	
@@ -227,7 +227,7 @@ sub usage_clustering_config {
 	die qq(
 
         Program: Cytofpipe_array
-	Version: 0.2 (running cytofpipe/v2.0)
+	Version: 0.2 (running cytofpipe/v2.1)
 	Contact: Lucia Conde <l.conde\@ucl.ac.uk>
 
 	------------------
