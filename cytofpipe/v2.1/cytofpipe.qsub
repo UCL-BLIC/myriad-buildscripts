@@ -5,8 +5,8 @@
 # =========================================================================================
 
 #$ -S /bin/bash
-#$ -l h_rt=24:00:00
-#$ -l mem=10G
+#$ -l h_rt=48:00:00
+#$ -l mem=50G
 #$ -l tmpfs=10G
 #$ -cwd
 #$ -jsv /shared/ucl/depts/cancer/apps/cytofpipe/v2.1/cytofpipe.jsv 
