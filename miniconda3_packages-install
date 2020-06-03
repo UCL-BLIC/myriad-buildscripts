@@ -46,6 +46,10 @@ conda install -c bioconda salmon openssl=1.0
 conda install -c bioconda bioawk openssl=1.0
 conda install -c bioconda bioconductor-dupradar
 
+#- for ~/Scratch/victor dms_tools2 examples
+conda install -c conda-forge imagemagick
+conda install -c conda-forge r-ggseqlogo
+
 
 #- issues
 #---------
