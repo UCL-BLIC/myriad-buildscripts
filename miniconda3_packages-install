@@ -7,6 +7,9 @@
 #
 
 
+#- gatk
+conda install -c bioconda gatk4=4.1.8.1-0
+
 #- deeptools
 conda install -c bioconda deeptools
 
