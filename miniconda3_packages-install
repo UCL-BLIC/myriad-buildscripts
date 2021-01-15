@@ -5,6 +5,13 @@
 #
 # by LC, 2019 
 #
+#
+# NOTE: I copied the current conda env into
+#	bioconda/2020-11-06 and updated gatk
+#	to 4.1.9.0 and added the python gatktools
+#	module (this needed for CNNScoreVariants
+##########################################
+
 
 
 #- gatk
@@ -48,6 +55,8 @@ conda install -c bioconda intervene
 conda install -c bioconda salmon openssl=1.0
 conda install -c bioconda bioawk openssl=1.0
 conda install -c bioconda bioconductor-dupradar
+conda install -c conda-forge r-argparse
+
 
 #- for ~/Scratch/victor dms_tools2 examples
 conda install -c conda-forge imagemagick
