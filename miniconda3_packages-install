@@ -10,6 +10,19 @@
 #	bioconda/2020-11-06 and updated gatk
 #	to 4.1.9.0 and added the python gatktools
 #	module (this needed for CNNScoreVariants
+# To install in the right env:
+#		$ conda info --envs 
+#			# conda environments:
+#			#
+#			base                  *  /shared/ucl/depts/cancer/apps/miniconda3
+#			                         /shared/ucl/depts/cancer/apps/miniconda3_gatk4.1.9.0
+#		$ conda config --append envs_dirs /shared/ucl/depts/cancer/apps/
+#		$ conda info --envs
+#			# conda environments:
+#			#
+#			base                  *  /shared/ucl/depts/cancer/apps/miniconda3
+#			miniconda3_gatk4.1.9.0     /shared/ucl/depts/cancer/apps/miniconda3_gatk4.1.9.0
+#		$ conda install -n miniconda3_gatk4.1.9.0 gatktool
 ##########################################
 
 
@@ -26,6 +39,8 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 conda install -c bioconda multiqc multiqc=1.6
+conda install -c bioconda control-freec
+conda install -c bioconda -n miniconda3_gatk4.1.9.0 control-freec
 
 #- UCSC bedGraphToBigWig, bigWigToWig, wigToBigWig
 conda config --add channels defaults
